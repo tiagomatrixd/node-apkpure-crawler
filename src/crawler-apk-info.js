@@ -42,10 +42,10 @@ module.exports = {
 }
 
 async function navigateDetailPage(page) {
-  await page.waitForSelector('.main .first');
+  await page.waitForSelector('.first-apk');
   await Promise.all([
     page.waitForNavigation(),
-    page.click('.main .first'),
+    page.click('.first-apk'),
   ]);
 }
 
