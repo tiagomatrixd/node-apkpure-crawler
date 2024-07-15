@@ -5,7 +5,7 @@ let browser;
 
 async function getBrowser() {
   if(browser) return browser;
-  browser = await puppeteer.launch({headless: true});
+  browser = await puppeteer.launch({headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'],});
   // (await (await browser.newPage()).$$eval('.detail_banner', ))
   return browser;
 }
